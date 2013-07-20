@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
 
 	def index
-		@items = Item.all
+		@user = current_user
+		@item = Item.new
 	end
 
 	def new
@@ -9,9 +10,6 @@ class ItemsController < ApplicationController
 	end
 
 	def create
-		p "============================="
-		p params[:item]
-		p current_user
 		if current_user
 			@item = current_user.items.create(item_params)
 		end
