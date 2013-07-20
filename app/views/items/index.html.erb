@@ -1,9 +1,5 @@
-<h1>Welcome!</h1>
-
 <% if session[:user_id] %>
-	<p>You're logged in bro!</p>
-	<%= link_to "Make a new item", new_item_path %>
-	<a href="/signout">Signout</a>
+	<%= render "/partials/signedin" %>
 <% else %>
-	<a href="/auth/twitter">Signin</a>
+	<%= render "/partials/signedout" %>
 <% end %>
