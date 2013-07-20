@@ -32,6 +32,12 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+gem 'twitter'
+gem 'omniauth-twitter'
+
+gem 'rspec-rails'
+gem 'capybara'
+
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
 
