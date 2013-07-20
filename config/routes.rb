@@ -1,5 +1,6 @@
 Streak::Application.routes.draw do
 
+  root :to => "items#index"
   resources :items
 
   get "/auth/:provider/callback" => "sessions#create"
