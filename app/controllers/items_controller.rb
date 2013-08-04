@@ -18,6 +18,10 @@ class ItemsController < ApplicationController
 		end
 	end
 
+	def destroy
+		@item = 
+	end
+
 
 	private
 

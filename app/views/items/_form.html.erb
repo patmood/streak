@@ -1,4 +1,6 @@
-<%= form_for @item, id:"new_task", remote: true do |f| %>
-	<%= f.text_field :description %>
-	<%= f.submit  %>
+<%= form_for @item, id:"new_item", remote: true do |f| %>
+	<li>
+		<%= f.text_field :description %>
+		<%= f.submit  %>
+	</li>
 <% end %>
