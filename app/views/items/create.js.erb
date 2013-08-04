@@ -1,4 +1,4 @@
 $('#new_item').remove();
 $('#new_link').show();
 $('#incomplete').prepend('<%= j render(@item) %>');
-$('#edit_task_<%= @task.id %>').submitOnCheck();
+$('#edit_item_<%= @item.id %>').submitOnCheck();
