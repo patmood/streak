@@ -1,1 +1,3 @@
-$('#incomplete').append('<li><%= @task.description %></li>');
+$('#new_task').remove();
+$('#new_link').show();
+$('#incomplete').append('<li><%= j render(@task) %></li>');

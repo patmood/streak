@@ -4,7 +4,7 @@
 	<div id="list">
 		<ul id="incomplete">
 			<% current_user.items.each do |item| %>
-			<li><%= item.description %></li>
+			<li><%= item.description %> <%= link_to "delete", item, method: :delete, data: {confirm: "Are you sure?"}, remote: true %></li>
 			<% end %>
 		</ul>
 	</div>

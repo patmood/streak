@@ -1,4 +1,4 @@
-<%= form_for @item, remote: true do |f| %>
+<%= form_for @item, id:"new_task", remote: true do |f| %>
 	<%= f.text_field :description %>
 	<%= f.submit  %>
 <% end %>
