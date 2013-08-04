@@ -3,11 +3,9 @@
 	<p><a href="/signout">Signout</a></p>
 	<div id="list">
 		<ul>
-			<%= form_for @item do |f| %>
-			<li><%= f.text_field :description %></li>
-			<% end %>
-			
-			<% @user.items.each do |item| %>
+			<li><%= render "items/new_item_form" %></li>
+
+			<% current_user.items.each do |item| %>
 			<li><%= item.description %></li>
 			<% end %>
 		</ul>
