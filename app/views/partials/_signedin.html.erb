@@ -3,8 +3,9 @@
 	<p><a href="/signout">Signout</a></p>
 	<div id="list">
 		<ul id="incomplete">
-			<% current_user.items.each do |item| %>
-			<li><%= item.description %> <%= link_to "delete", item, method: :delete, data: {confirm: "Are you sure?"}, remote: true %></li>
-			<% end %>
+			<%= render @incomplete_items %>
+		</ul>
+		<ul id="complete">
+			<%= render @complete_items %>
 		</ul>
 	</div>

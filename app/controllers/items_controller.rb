@@ -1,7 +1,8 @@
 class ItemsController < ApplicationController
 
 	def index
-		@item = Item.new
+		@incomplete_items = Item.where(donetoday: false)
+    @complete_items = Item.where(donetoday: true)
 	end
 
 	def new
@@ -19,7 +20,12 @@ class ItemsController < ApplicationController
 	end
 
 	def destroy
-		@item = 
+		#add some more security here by accessing item through current_user
+		@item = Item.destroy(params[:id])
+		respond_to do |format|
+			format.html {	redirect_to root_path }
+			format.js
+		end		
 	end
 
 
