@@ -12,7 +12,10 @@ class ItemsController < ApplicationController
 		if current_user
 			@item = current_user.items.create(item_params)
 		end
-		redirect_to root_path
+		respond_to do |format|
+			format.html {	redirect_to root_path }
+			format.js
+		end
 	end
 
 
