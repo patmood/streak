@@ -6,7 +6,7 @@ body {
   line-height: 1.5em;
   font-size: 18px;
   color: #fff;
-  background: #2ecc71;
+  background: url('white_wall_hash.png');
   a {
   	text-decoration: none;
   	&:visited {	color: #bdc3c7;	}
@@ -35,7 +35,8 @@ body {
   padding: 5px;
 }
 #list {
-	max-width: 500px;
+	width: 90%;
+  max-width: 500px;
 	margin: auto;
   ul { 
   	list-style-type: none;

@@ -3,6 +3,9 @@ class CreateItems < ActiveRecord::Migration
     create_table :items do |t|
     	t.belongs_to	:user
     	t.text	:description
+    	t.boolean :donetoday?
+    	t.integer :localstreak
+    	t.integer :maxstreak
     end
   end
 end
