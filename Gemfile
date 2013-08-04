@@ -37,6 +37,7 @@ gem 'omniauth-twitter'
 
 gem 'rspec-rails'
 gem 'capybara'
+gem 'pg'
 
 # Use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
