@@ -1,0 +1,6 @@
+	var f = $('#edit_item_<%= @item.id %>');
+<% if @item.donetoday %>
+	f.prependTo('#complete');
+<% else %>
+	f.appendTo('#incomplete');
+<% end%>

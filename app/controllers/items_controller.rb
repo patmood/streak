@@ -30,10 +30,7 @@ class ItemsController < ApplicationController
 
 	def update
 		#add some more security here by accessing item through current_user
-		p '======== UPDATE PARAMS ============='
-		p params
     @item = Item.find(params[:id])
-    p "@item = #{@item.id}"
     @item.update_attributes!(item_params)
     respond_to do |format|
       format.html { redirect_to tasks_url }
