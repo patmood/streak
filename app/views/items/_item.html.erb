@@ -3,6 +3,7 @@
 		<%= f.label :description, item.description %>
 		<%= link_to "(remove)", item, method: :delete, data: {confirm: "Are you sure?"}, remote: true %>
 		<%= f.check_box :donetoday %>
+		<%= f.hidden_field :user_updated_at  %>
 		<%= f.submit  %>
 	</li>
 <% end %>
