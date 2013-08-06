@@ -42,7 +42,7 @@ class ItemsController < ApplicationController
 	private
 
   def item_params
-    params.require(:item).permit(:description, :donetoday)
+    params.require(:item).permit(:description, :donetoday, :user_updated_at)
   end
 
 end
