@@ -17,11 +17,13 @@ ActiveRecord::Schema.define(version: 20130720014633) do
   enable_extension "plpgsql"
 
   create_table "items", force: true do |t|
-    t.integer "user_id"
-    t.text    "description"
-    t.boolean "donetoday",   default: false, null: false
-    t.integer "localstreak"
-    t.integer "maxstreak"
+    t.integer  "user_id"
+    t.text     "description"
+    t.boolean  "donetoday",   default: false, null: false
+    t.integer  "localstreak"
+    t.integer  "maxstreak"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "users", force: true do |t|

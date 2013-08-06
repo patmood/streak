@@ -6,6 +6,7 @@ class CreateItems < ActiveRecord::Migration
     	t.boolean :donetoday, default: false, null: false
     	t.integer :localstreak
     	t.integer :maxstreak
+	t.timestamps
     end
   end
 end
