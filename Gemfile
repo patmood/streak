@@ -35,8 +35,8 @@ end
 gem 'twitter'
 gem 'omniauth-twitter'
 
-gem 'rspec-rails'
-gem 'capybara'
+gem 'rspec-rails', group: :development
+gem 'capybara', group: :development
 gem 'pg'
 
 # Use ActiveModel has_secure_password
