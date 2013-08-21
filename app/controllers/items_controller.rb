@@ -22,8 +22,7 @@ class ItemsController < ApplicationController
 	end
 
 	def destroy
-		#add some more security here by accessing item through current_user
-		@item = Item.destroy(params[:id])
+		@item = current_user.items.destroy(params[:id])
 		respond_to do |format|
 			format.html {	redirect_to root_path }
 			format.js
@@ -31,8 +30,7 @@ class ItemsController < ApplicationController
 	end
 
 	def update
-		#add some more security here by accessing item through current_user
-    @item = Item.find(params[:id])
+    @item = current_user.items.find(params[:id])
     @item.update_attributes!(item_params)
     respond_to do |format|
       format.html { redirect_to tasks_url }

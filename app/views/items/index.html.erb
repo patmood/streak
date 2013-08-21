@@ -1,6 +1,10 @@
-<h1>This is the Items index view</h1>
-<% if current_user %>
-	<%= render "/partials/signedin" %>
-<% else %>
-	<%= render "/partials/signedout" %>
-<% end %>
+<p><%= link_to "Add new task", new_item_path, id: "new_link", remote: true %></p>
+<p><a href="/signout">Signout</a></p>
+<div id="list">
+  <ul id="incomplete">
+    <%= render @incomplete_items %>
+  </ul>
+  <ul id="complete">
+    <%= render @complete_items %>
+  </ul>
+</div>
