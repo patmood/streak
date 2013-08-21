@@ -1,12 +1,14 @@
 class ItemsController < ApplicationController
 
 	def index
-		@incomplete_items = Item.where(donetoday: false)
-    @complete_items = Item.where(donetoday: true)
+    if current_user
+  		@incomplete_items = current_user.items.where(donetoday: false)
+      @complete_items = current_user.items.where(donetoday: true)
+    end
 	end
 
 	def new
-		@item = Item.new
+		@item = current_user.items.new
 	end
 
 	def create
@@ -25,7 +27,7 @@ class ItemsController < ApplicationController
 		respond_to do |format|
 			format.html {	redirect_to root_path }
 			format.js
-		end		
+		end
 	end
 
 	def update

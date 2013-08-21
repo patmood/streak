@@ -34,6 +34,11 @@ group :doc do
   gem 'sdoc', require: false
 end
 
+# ADD AND BUNDLE THIS ONCE ON A SECURE CONNECTION
+# group :development do
+#   gem "better_errors"
+# end
+
 gem 'twitter'
 gem 'omniauth-twitter'
 
