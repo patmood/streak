@@ -38,6 +38,12 @@ class ItemsController < ApplicationController
     end
 	end
 
+  def order
+    p "====== ITEM LIST ORDER PARAMS ============="
+    p params
+    render :nothing => true, :status => 200, :content_type => 'text/html'
+  end
+
 
 	private
 
