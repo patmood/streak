@@ -2,7 +2,7 @@ class ItemsController < ApplicationController
 
 	def index
     if current_user
-  		@incomplete_items = current_user.items.where(donetoday: false)
+  		@incomplete_items = current_user.items.where(donetoday: false).order("list_order ASC")
       @complete_items = current_user.items.where(donetoday: true)
     end
 	end
@@ -39,8 +39,9 @@ class ItemsController < ApplicationController
 	end
 
   def order
-    p "====== ITEM LIST ORDER PARAMS ============="
-    p params
+    params[:edit_item].each_with_index do |item,i|
+      current_user.items.update(item, list_order: i)
+    end
     render :nothing => true, :status => 200, :content_type => 'text/html'
   end
 

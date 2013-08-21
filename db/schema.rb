@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(version: 20130720014633) do
     t.text     "description"
     t.boolean  "donetoday",       default: false, null: false
     t.integer  "localstreak"
+    t.integer  "list_order",      default: 999
     t.integer  "maxstreak"
     t.datetime "user_updated_at"
     t.datetime "created_at"
